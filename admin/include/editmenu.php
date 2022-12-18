@@ -63,7 +63,7 @@ if(isset($_GET['data'])){
           <?php }?>
         <?php }?>
       </div>
-      <form class="form-horizontal" action="index.php?include=konfirmasi-edit-menu" method="post">
+      <form class="form-horizontal" action="index.php?include=konfirmasi-edit-menu" method="post" enctype="multipart/form-data">
         <div class="card-body">
           
         <div class="form-group row">

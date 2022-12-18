@@ -129,7 +129,7 @@
 				?> 
 					<div class="col-lg-4 col-md-6 special-grid drinks">
 						<div class="gallery-single fix">
-							<img src="images/img-01.jpg" class="img-fluid" alt="Image">
+							<img src="admin/cover/<?php echo $cover;?>" class="img-fluid" alt="Image">
 							<div class="why-text">
 								<h4><?php echo $nama_menu;?></h4>
 								<h5>Rp. <?php echo $harga_menu;?></h5>
