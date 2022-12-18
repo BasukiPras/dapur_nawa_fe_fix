@@ -1,13 +1,15 @@
 <?php 
     // include('../koneksi/koneksi.php');
+    var_dump($_POST);
+    var_dump($_FILES);
     $id_kategori_menu = $_POST['kategori_menu'];
     $nama_menu = $_POST['nama_menu'];
     $harga_menu = $_POST['harga_menu'];
     $tag = $_POST['tag'];
-    $cover = $_POST['cover'];
-    // $lokasi_file = $_FILES['cover']['tmp_name'];
-    // $nama_file = $_FILES['cover']['name'];
-    // $direktori = 'cover/'.$nama_file;
+    $cover = $_FILES['foto'];
+    $lokasi_file = $_FILES['foto']['tmp_name'];
+    $nama_file = $_FILES['foto']['name'];
+    $direktori = 'cover/'.$nama_file;
 
     if(empty($id_kategori_menu)){	   
         header("Location:index.php?include=tambah-menu&notif=tambahkosong&

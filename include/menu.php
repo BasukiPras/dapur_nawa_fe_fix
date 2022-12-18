@@ -100,39 +100,6 @@
 </section>
 					>
 <!-- END FAVOURITE MENU -->
-<div class="menu-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>Special Menu</h2>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-					</div>
-				</div>
-			</div>				
-						<?php 
-						$sql_b = "SELECT `b`.`id_menu`, `b`.`nama_menu`, `b`.`cover`, 
-						`b`.`harga_menu` FROM `menu` `b` ORDER BY `b`.`id_menu` ASC limit 6";
-						$query_b = mysqli_query($koneksi, $sql_b);
-						while($data_b = mysqli_fetch_row($query_b)){
-						$id_menu = $data_b[0];
-						$nama_menu = $data_b[1];
-						$cover = $data_b[2];
-						$harga_menu = $data_b[3];
-						?> 
-							<div class="col-md-4 special-grid drinks">
-								<div class="gallery-single fix">
-									<img src="images/img-01.jpg" class="img-fluid" alt="Image">
-									<div class="why-text">
-										<h4>><?php echo $nama_menu;?></h4>
-										<h5>Rp. <?php echo $harga_menu;?></h5>
-									</div>
-								</div>
-							</div>					
-				<!-- 	end row -->
-			<?php }?>
-		</div>
-	</div>
 
 <!-- Start Food -->
 <section class="speciality" id="speciality">
@@ -147,34 +114,33 @@
 	</div>
 <!-- End food -->
 <div class="row">
-				<div class="tab-content" id="v-pills-tabContent">
-					<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-						aria-labelledby="v-pills-home-tab">
-						<div class="row">
-						<?php 
-$sql_b = "SELECT `b`.`id_menu`, `b`.`nama_menu`, `b`.`cover`, 
-`b`.`harga_menu` FROM `menu` `b` ORDER BY `b`.`id_menu` ASC limit 6";
-$query_b = mysqli_query($koneksi, $sql_b);
-while($data_b = mysqli_fetch_row($query_b)){
-$id_menu = $data_b[0];
-$nama_menu = $data_b[1];
-$cover = $data_b[2];
-$harga_menu = $data_b[3];
-?> 
-							<div class="col-lg-4 col-md-6 special-grid drinks">
-								<div class="gallery-single fix">
-									<img src="images/img-01.jpg" class="img-fluid" alt="Image">
-									<div class="why-text">
-										<h4><?php echo $nama_menu;?></h4>
-										<h5>Rp. <?php echo $harga_menu;?></h5>
-									</div>
-								</div>
+	<div class="tab-content" id="v-pills-tabContent">
+		<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+			<div class="row">
+				<?php 
+					$sql_b = "SELECT `b`.`id_menu`, `b`.`nama_menu`, `b`.`cover`, 
+					`b`.`harga_menu` FROM `menu` `b` ORDER BY `b`.`id_menu` ASC limit 6";
+					$query_b = mysqli_query($koneksi, $sql_b);
+					while($data_b = mysqli_fetch_row($query_b)){
+					$id_menu = $data_b[0];
+					$nama_menu = $data_b[1];
+					$cover = $data_b[2];
+					$harga_menu = $data_b[3];
+				?> 
+					<div class="col-lg-4 col-md-6 special-grid drinks">
+						<div class="gallery-single fix">
+							<img src="admin/cover/<?php echo $cover;?>" class="img-fluid" alt="Image">
+							<div class="why-text">
+								<h4><?php echo $nama_menu;?></h4>
+								<h5>Rp. <?php echo $harga_menu;?></h5>
 							</div>
 						</div>
 					</div>
-					<?php }?>
-				</div>
-			</div>
+			<?php }?>
+	</div>
+</div>
+		
+</section>	
 <!-- Start Drink -->
 <section class="speciality" id="speciality">
 <div class="box-container">
@@ -186,97 +152,92 @@ $harga_menu = $data_b[3];
 			</div>
 		</div>
 	</div>
-	<?php 
-$sql_b = "SELECT `b`.`id_menu`, `b`.`nama_menu`, `b`.`cover`, 
-`b`.`harga_menu` FROM `menu` `b` ORDER BY `b`.`id_menu` DESC limit 6";
-$query_b = mysqli_query($koneksi, $sql_b);
-while($data_b = mysqli_fetch_row($query_b)){
-$id_menu = $data_b[0];
-$nama_menu = $data_b[1];
-$cover = $data_b[2];
-$harga_menu = $data_b[3];
-?> 
-	<div class="tab-content" id="v-pills-tabContent">
-						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-							<div class="row">
-								<div class="col-lg-4 col-md-6 special-grid drinks">
-									<div class="gallery-single fix">
-										<img src="images/drink-1.jpg" class="img-fluid" alt="Image">
-										<div class="why-text">
-											<h4><?php echo $nama_menu;?></h4>
-											<p></p>
-											<h5>Rp. <?php echo $harga_menu;?></h5>
-										</div>
-									</div>
-								</div>
-								
-								<!-- <div class="col-lg-4 col-md-6 special-grid drinks">
-									<div class="gallery-single fix">
-										<img src="images/drink-2.jpg" class="img-fluid" alt="Image">
-										<div class="why-text">
-											<h4>Kopi Hitam</h4>
-											<p></p>
-											<h5> Rp 4.000</h5>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-lg-4 col-md-6 special-grid drinks">
-									<div class="gallery-single fix">
-										<img src="images/drinnk-3.jpg" class="img-fluid" alt="Image">
-										<div class="why-text">
-											<h4>Teh Hangat</h4>
-											<p></p>
-											<h5> Rp 3.000</h5>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-lg-4 col-md-6 special-grid lunch">
-									<div class="gallery-single fix">
-										<img src="images/drink-4.jpg" class="img-fluid" alt="Image">
-										<div class="why-text">
-											<h4>Luwak White Coffee</h4>
-											<p></p>
-											<h5> Rp 5.000</h5>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-lg-4 col-md-6 special-grid lunch">
-									<div class="gallery-single fix">
-										<img src="images/drink-5.jpg" class="img-fluid" alt="Image">
-										<div class="why-text">
-											<h4>Kopi Susu</h4>
-											<p></p>
-											<h5> Rp 5.000</h5>
-										</div>
-									</div>
-								</div>
-								
-								<div class="col-lg-4 col-md-6 special-grid lunch">
-									<div class="gallery-single fix">
-										<img src="images/drink-6.jpg" class="img-fluid" alt="Image">
-										<div class="why-text">
-											<h4>ES Jeruk</h4>
-											<p></p>
-											<h5>Rp.4000</h5>
-										</div>
-									</div>
-								</div>										 -->
+	
+
+	<div class="row">
+		<div class="tab-content" id="v-pills-tabContent">
+			<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+			<div class="row">
+				<?php 
+					$sql_b = "SELECT `b`.`id_menu`, `b`.`nama_menu`, `b`.`cover`, 
+					`b`.`harga_menu` FROM `menu` `b` ORDER BY `b`.`id_menu` DESC limit 6";
+					$query_b = mysqli_query($koneksi, $sql_b);
+					while($data_b = mysqli_fetch_row($query_b)){
+					$id_menu = $data_b[0];
+					$nama_menu = $data_b[1];
+					$cover = $data_b[2];
+					$harga_menu = $data_b[3];
+				?> 
+					<div class="col-lg-4 col-md-6 special-grid drinks">
+						<div class="gallery-single fix">
+							<img src="images/drink-1.jpg" class="img-fluid" alt="Image">
+							<div class="why-text">
+								<h4><?php echo $nama_menu;?></h4>
+								<p></p>
+								<h5>Rp. <?php echo $harga_menu;?></h5>
+							</div>
+						</div>
+					
+					<!-- <div class="col-lg-4 col-md-6 special-grid drinks">
+						<div class="gallery-single fix">
+							<img src="images/drink-2.jpg" class="img-fluid" alt="Image">
+							<div class="why-text">
+								<h4>Kopi Hitam</h4>
+								<p></p>
+								<h5> Rp 4.000</h5>
 							</div>
 						</div>
 					</div>
 					
-				</div>
-			</div>
-			
+					<div class="col-lg-4 col-md-6 special-grid drinks">
+						<div class="gallery-single fix">
+							<img src="images/drinnk-3.jpg" class="img-fluid" alt="Image">
+							<div class="why-text">
+								<h4>Teh Hangat</h4>
+								<p></p>
+								<h5> Rp 3.000</h5>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-4 col-md-6 special-grid lunch">
+						<div class="gallery-single fix">
+							<img src="images/drink-4.jpg" class="img-fluid" alt="Image">
+							<div class="why-text">
+								<h4>Luwak White Coffee</h4>
+								<p></p>
+								<h5> Rp 5.000</h5>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-4 col-md-6 special-grid lunch">
+						<div class="gallery-single fix">
+							<img src="images/drink-5.jpg" class="img-fluid" alt="Image">
+							<div class="why-text">
+								<h4>Kopi Susu</h4>
+								<p></p>
+								<h5> Rp 5.000</h5>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-4 col-md-6 special-grid lunch">
+						<div class="gallery-single fix">
+							<img src="images/drink-6.jpg" class="img-fluid" alt="Image">
+							<div class="why-text">
+								<h4>ES Jeruk</h4>
+								<p></p>
+								<h5>Rp.4000</h5>
+							</div>
+						</div>
+					</div>										 -->
+						</div>
+		<?php }?>
+
 		</div>
-		
 	</div>
-	
-</div>
-<?php }?>
 </section>
 <!-- End drink -->
 </div>

@@ -102,7 +102,7 @@ if (isset($_SESSION['katakunci_menu'])) {
         </thead>
         <tbody>
           <?php
-          $batas = 2;
+          $batas = 5;
           if (!isset($_GET['halaman'])) {
             $posisi = 0;
             $halaman = 1;
