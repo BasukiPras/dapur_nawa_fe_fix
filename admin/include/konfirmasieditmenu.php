@@ -15,7 +15,7 @@ if(isset($_SESSION['id_menu'])){
     $query_f = mysqli_query($koneksi,$sql_f);
     while($data_f = mysqli_fetch_row($query_f)){
         $cover = $data_f[0];
- 
+    }
     //get cover 
     $sql_f = "SELECT `cover` FROM `menu` WHERE `id_menu`='$id_menu'";
     $query_f = mysqli_query($koneksi,$sql_f);
@@ -23,7 +23,7 @@ if(isset($_SESSION['id_menu'])){
         $cover = $data_f[0];
         //echo $foto;
     } 
-}
+} 
     if(empty($id_kategori_menu)){
 	    header("Location:index.php?include=edit-menu&data=$id_menu&notif=editkosong
          &jenis=kategori");
@@ -65,6 +65,5 @@ if(!empty($_POST['tag'])){
 	}
 }
 header("Location:index.php?include=menu&notif=editberhasil");
-}
 }
 ?>
