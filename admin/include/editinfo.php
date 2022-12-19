@@ -1,4 +1,5 @@
 <?php 
+
 if(isset($_GET['data'])){
 	$id_info = $_GET['data'];
   $_SESSION['id_info'] = $id_info;
@@ -10,21 +11,21 @@ if(isset($_GET['data'])){
   $konten_info = $data_z[1];
   }}
 ?>
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h3><i class="fas fa-edit"></i> Edit Data Info</h3>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="index.php?include=info">Data Info</a></li>
-              <li class="breadcrumb-item active">Edit Data Info</li>
-            </ol>
-          </div>
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h3><i class="fas fa-edit"></i> Edit Data Info</h3>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="index.php?include=info">Data Info</a></li>
+            <li class="breadcrumb-item active">Edit Data Info</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
 
     <!-- Main content -->
     <section class="content">
@@ -48,7 +49,7 @@ if(isset($_GET['data'])){
           <?php }?>
         <?php }?>
       </div>
-      <form class="form-horizontal" method="post" action="index.php?include=konfirmasi-edit-info">
+      <form class="form-horizontal" method="post" action="index.php?include=konfirmasi-edit-info" enctype="multipart/form-data">
         <div class="card-body">
         <div class="form-group row">
             <label for="foto" class="col-sm-3 col-form-label">Foto Menu </label>
