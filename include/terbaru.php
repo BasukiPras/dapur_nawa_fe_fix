@@ -10,12 +10,22 @@
 		</div>
 	<section class="popular" id="popular">
 		<div class="box-container">
+		<?php 
+					$sql_b = "SELECT `b`.`id_info`, `b`.`judul_info`, `b`.`cover` 
+					FROM `info` `b` ORDER BY `b`.`id_info` ASC";
+					$query_b = mysqli_query($koneksi, $sql_b);
+					while($data_b = mysqli_fetch_row($query_b)){
+					$id_info = $data_b[0];
+					$judul_info = $data_b[1];
+					$cover = $data_b[2];
+				?> 
 			<div class="box">
-				<a href="index.php?include=terbarunasigoreng"><img src="images/ytkorea.png" alt=""></a>
-				<h3>CICIP NASI GORENG DAN BAKSO GORENG, YOUTUBER KOREA INI KETAGIHAN</h3>
+				<a href="index.php?include=terbarunasigoreng"><img src="admin/cover/<?php echo $cover;?>" class="img-fluid" alt="Image">
+				<h3><?php echo $judul_info;?></h3>
 				
 			</div>
-			<div class="box">
+			<?php }?>
+			<!-- <div class="box">
 				<a href="index.php?include=terbarumenggoreng"><img src="images/menggoreng.png" alt=""></a>
 				<h3>TIPS MENGGORENG MAKANAN AGAR TIDAK TERLALU  BERBAHAYA BAGI KESEHATAN</h3>				
 			</div>
@@ -38,7 +48,7 @@
 				<a href="index.php?include=terbaruinovasi"><img src="images/inovasinasgor2.png" alt=""></a>
 				<h3>INOVASI NASI GORENG YANG BISA KAMU COBA JADI BISNIS RUMAHAN</h3>
 				
-			</div>
+			</div> -->
 		</div>
 	</section>
 </div>

@@ -171,68 +171,13 @@
 				?> 
 					<div class="col-lg-4 col-md-6 special-grid drinks">
 						<div class="gallery-single fix">
-							<img src="images/drink-1.jpg" class="img-fluid" alt="Image">
+						<img src="admin/cover/<?php echo $cover;?>" class="img-fluid" alt="Image">
 							<div class="why-text">
 								<h4><?php echo $nama_menu;?></h4>
 								<p></p>
 								<h5>Rp. <?php echo $harga_menu;?></h5>
 							</div>
-						</div>
-					
-					<!-- <div class="col-lg-4 col-md-6 special-grid drinks">
-						<div class="gallery-single fix">
-							<img src="images/drink-2.jpg" class="img-fluid" alt="Image">
-							<div class="why-text">
-								<h4>Kopi Hitam</h4>
-								<p></p>
-								<h5> Rp 4.000</h5>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-4 col-md-6 special-grid drinks">
-						<div class="gallery-single fix">
-							<img src="images/drinnk-3.jpg" class="img-fluid" alt="Image">
-							<div class="why-text">
-								<h4>Teh Hangat</h4>
-								<p></p>
-								<h5> Rp 3.000</h5>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-4 col-md-6 special-grid lunch">
-						<div class="gallery-single fix">
-							<img src="images/drink-4.jpg" class="img-fluid" alt="Image">
-							<div class="why-text">
-								<h4>Luwak White Coffee</h4>
-								<p></p>
-								<h5> Rp 5.000</h5>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-4 col-md-6 special-grid lunch">
-						<div class="gallery-single fix">
-							<img src="images/drink-5.jpg" class="img-fluid" alt="Image">
-							<div class="why-text">
-								<h4>Kopi Susu</h4>
-								<p></p>
-								<h5> Rp 5.000</h5>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-lg-4 col-md-6 special-grid lunch">
-						<div class="gallery-single fix">
-							<img src="images/drink-6.jpg" class="img-fluid" alt="Image">
-							<div class="why-text">
-								<h4>ES Jeruk</h4>
-								<p></p>
-								<h5>Rp.4000</h5>
-							</div>
-						</div>
-					</div>										 -->
+						</div>					 -->
 						</div>
 		<?php }?>
 

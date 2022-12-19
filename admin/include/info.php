@@ -2,6 +2,17 @@
 if ((isset($_GET['aksi'])) && (isset($_GET['data']))) {
   if ($_GET['aksi'] == 'hapus') {
     $id_info = $_GET['data'];
+    //get cover
+    $sql_f = "SELECT `cover` FROM `info` WHERE `id_info`='$id_info'";
+    $query_f = mysqli_query($koneksi, $sql_f);
+    $jumlah_f = mysqli_num_rows($query_f);
+    if ($jumlah_f > 0) {
+      while ($data_f = mysqli_fetch_row($query_f)) {
+        $cover = $data_f[0];
+        //menghapus cover
+        unlink("cover/$cover");
+      }
+    }
 
     //hapus tag 
     $sql_dh = "delete from `tag_info` where `id_tag_info` = '$id_tag_info'";
