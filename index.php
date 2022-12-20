@@ -23,8 +23,8 @@
         include("include/contact.php");
       }else if($include=="terbaru"){    
         include("include/terbaru.php");
-      }else if($include=="terbarunasigoreng"){    
-        include("include/terbarunasigoreng.php");
+      }else if($include=="terbaruinfo"){    
+        include("include/terbaruinfo.php");
       }else if($include=="terbarumenggoreng"){    
         include("include/terbarumenggoreng.php");
       }else if($include=="terbaruinovasi"){    

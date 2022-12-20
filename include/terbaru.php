@@ -20,7 +20,7 @@
 					$cover = $data_b[2];
 				?> 
 			<div class="box">
-				<a href="index.php?include=terbarunasigoreng"><img src="admin/cover/<?php echo $cover;?>" class="img-fluid" alt="Image">
+				<a href="index.php?include=terbaruinfo&data=<?php echo $id_info;?>"><img src="admin/cover/<?php echo $cover;?>" class="img-fluid" alt="Image">
 				<h3><?php echo $judul_info;?></h3>
 				
 			</div>
