@@ -1,7 +1,8 @@
 <?php
-$koneksi = mysqli_connect("localhost","root","","dapur_nawa3");
-//cek koneksi
-if (!$koneksi){
-    die("Error koneksi: " . mysqli_connect_errno());
-}
+    $koneksi = mysqli_connect("localhost","root","root","dapur_nawa2");
+    //cek koneksi
+    if (!$koneksi){
+        die("Error koneksi: " . mysqli_connect_errno());
+    }
+
 ?>
